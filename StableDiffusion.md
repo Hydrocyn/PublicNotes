@@ -1,0 +1,162 @@
+
+[喂饭级stable_diffusion_webUI使用教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/617997179)
+
+WebUI 通过浏览器与程序进行交互
+	[Web-UI设计，你需要了解的！ - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/250029144)
+	[web端ui是不是就是网页设计？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/35117155)
+
+midjourney 的使用，扁平化素材（小人，icon）的生成
+[Midjourney](https://www.midjourney.com/home?callbackUrl=%2Fexplore)
+
+### 其他的模型
+
+**DALL·E 2**[https://openai.com/dall-e-2/](https://link.zhihu.com/?target=https%3A//openai.com/dall-e-2/) _
+
+[设计师的 Midjourney 入门真保姆级教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/617025808)
+
+## Python 环境配置
+
+stable diffusion 是机器学习模型，web-ui 对他进行了封装，于是需要通过 Anaconda 和 python 进行环境管理和启动
+
+Anaconda 的安装和环境配置参考 [[Anaconda]] 和 [[Anaconda#创建虚拟环境]]
+
+通过 conda 安装匹配版本的 PyTorch，同时要注意 CUDA 版本
+```bash
+conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia
+```
+如果不太清楚部署的语句，可以问 deepseek
+```bash
+pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu118
+```
+验证 CUDA 是否可用：
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+检查 CUDA 版本。在命令行输入
+```bash
+nvidia-smi
+```
+输出右上角显示 **CUDA Version: 12.2**，参考 PyTorch 官方版本表选择 PyTorch 版本
+不然可能出现 `cuDNN_STATUS_NOT_INITIALIZED` 错误
+
+## Stable Diffusion 模型本地部署
+
+**Stable Diffusion** 官方网站
+[https://stability.ai/blog/stabl](https://link.zhihu.com/?target=https%3A//stability.ai/blog/stable-diffusion-public-release)
+[Stable Diffusion Online (stablediffusionweb.com)](https://stablediffusionweb.com/#ai-image-generator)
+[Stability AI Image Models — Stability AI](https://stability.ai/stable-image)
+
+webui开源代码地址：[AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) ，以此进行 git 部署 stable-diffusion-webui
+	在 git bash 中输入 `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui)`，即可下载文件夹
+
+这也是一个 webui [Sygil-Dev/sygil-webui: Stable Diffusion web UI](https://github.com/Sygil-Dev/sygil-webui)
+
+项目安装后，需要在 conda 环境中安装 webui 依赖
+```bash
+pip install -r requirements.txt
+```
+国内需要加速可以使用清华镜像源
+```bash
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### webui-user. bat 启动
+
+不是很推荐用 webui-user. bat 进行启动, 因为它会使用默认的 python 环境，不太好管理。
+
+在 conda prompt 或者命令行中使用以下语句启动虚拟环境
+```bash
+cd /dG:\stable-diffusion-webui
+conda activate G:\conda_envs\sd-webui
+```
+
+在虚拟环境下启动 WebUI
+```bash
+python launch.py --listen --xformers
+python launch.py --listen
+python launch.py --xformers
+```
+`--xformers` 参数可以提升生成速度 `
+
+
+脚本会自动启动 Web 服务器，并在命令行中显示本地访问链接（通常为 `http://127.0.0.1:7860`，或者使用 `http://localhost:7860`，浏览器输入即可
+
+可以自己编写一键启动的 bat 文件
+```bash
+@echo off
+cd /d "G:\stable-diffusion-webui"
+call conda activate "G:\conda_envs\sd-webui"
+python launch.py --listen --xformers --medvram
+pause
+```
+
+若需进一步优化显存或速度，可扩展启动命令：
+```bash
+python launch.py --listen --xformers --medvram --opt-split-attention --no-half-vae
+```
+
+|参数|作用|适用场景|
+|---|---|---|
+|`--opt-split-attention`|优化注意力计算，降低显存占用|4-6GB显存|
+|`--no-half-vae`|禁用VAE半精度，减少色块问题|低端显卡（如GTX 10系列）|
+
+[windows下命令行模式中cd命令无效的原因-CSDN博客](https://blog.csdn.net/qq_45061258/article/details/113282513)
+[Download The Official NVIDIA Drivers | NVIDIA](https://www.nvidia.com/en-us/drivers/)
+[CUDA GPU Compute Capability | NVIDIA Developer](https://developer.nvidia.com/cuda-gpus)
+### models & extensions 模型和插件管理
+
+#### 权重文件
+下载权重文件 `sd-v 1-4.ckpt`:[CompVis/stable-diffusion-v-1-4-original · Hugging Face](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original)
+但好像 [stablediffusiontutorials/stable-diffusion-v1.5 · Hugging Face](https://huggingface.co/stablediffusiontutorials/stable-diffusion-v1.5)  里的 safetensors 也能用
+
+推荐替代（更安全高效）：未测试的链接
+1. **Pruned版本**（体积缩小50%，去除非必要权重）：  
+    [https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors)
+2. **现代格式**（`.safetensors`防恶意代码）：  
+    [https://civitai.com/models/4201?modelVersionId=15236](https://civitai.com/models/4201?modelVersionId=15236)
+#### 官方下载扩展
+在 extension 中选择 avaliable 进行操作，但是可能会因为网络问题不成功，出现 `AssertionError: extension access disabled because of command line flags` 。可参考[喂饭级stable_diffusion_webUI使用教程 - 知乎](https://zhuanlan.zhihu.com/p/617997179)
+我建议用 git 在 extensions 文件夹下复制
+
+
+#### 绘图模型
+
+绘图模型是为了特定风格进行训练的特化模型，不同模型生成不同风格的图片
+模型文件放在 `models/Stable-diffusion` 目录下
+
+有关模型的解释：[终极指南！Stable Diffusion 模型全解析，看这篇就够了_stablediffusion 模型-CSDN博客](https://blog.csdn.net/ice_99/article/details/146556735) 
+
+模型下载站：[Civitai: The Home of Open-Source Generative AI](https://civitai.com/)
+SD 1.5 官方基础大模型 [stablediffusiontutorials/stable-diffusion-v1.5 · Hugging Face](https://huggingface.co/stablediffusiontutorials/stable-diffusion-v1.5) 
+绘制二次元风格的 MeinaMix : [Meina/MeinaMix · Hugging Face](https://huggingface.co/Meina/MeinaMix) [Meina/MeinaMix at main](https://huggingface.co/Meina/MeinaMix/tree/main) 
+写实风格的 majicMIX realistic 麦橘写实  [majicMIX realistic 麦橘写实 - v7 | Stable Diffusion Checkpoint | Civitai](https://civitai.com/models/43331/majicmix-realistic) 
+其他常用模型：[超全 Stable Diffusion 常用模型推荐（含网盘下载链接） - 知乎](https://zhuanlan.zhihu.com/p/28932301846) 
+
+#### LoRA 模型微调
+
+具体我也没有用过，似乎需要提示词进行激活？
+
+LoRA 模型存放路径
+```bash
+stable-diffusion-webui/
+└── models/
+    └── Lora/  # LoRA文件存放位置
+        ├── koreanDollLikeness_v10.safetensors
+        └️── detailEnhancer_v20.safetensors
+```
+
+#### Controlnet 姿势管理
+
+controlnet 提供了将骨骼文件导入程序，指导 AI 生成特定动作的方法
+使用方法参考：[【AI绘画】完美控制画面！告别抽卡时代 人物动作控制/景深/线稿上色 Controlnet安装使用教程_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1Wo4y1i77v/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=abb373670a9fcb03baabf3e1d393d6fa)
+[【AI绘画】革命性技术突破：ControlNet_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1XA411m7s2/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=abb373670a9fcb03baabf3e1d393d6fa)
+
+插件下载：[Mikubill/sd-webui-controlnet: WebUI extension for ControlNet](https://github.com/Mikubill/sd-webui-controlnet) ，同样使用 git，在 `G:\stable-diffusion-webui\extensions` 中管理
+模型下载： https://huggingface.co/webui/ControlNet-modules-safetensors/tree/main ，比如 `control_openpose-fp 16.safetensors` ，该模型放在文件夹 `G:\stable-diffusion-webui\extensions\sd-webui-controlnet\models` 下，此文件夹在安装 sb-webui-controlnet 后出现 
+
+
+#### ADtailer 局部重绘
+
+下载：[Bing-su/adetailer: Auto detecting, masking and inpainting with detection model.](https://github.com/Bing-su/adetailer) 
+使用参考：[Stable Diffusion 必装插件之 ADetailer，修脸修手无敌，各种参数详解 - 知乎](https://zhuanlan.zhihu.com/p/678777327) 
