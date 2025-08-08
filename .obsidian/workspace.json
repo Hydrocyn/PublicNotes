@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "欢迎"
             }
+          },
+          {
+            "id": "9b49685f46d42619",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "0fb049a12757a89c",
@@ -164,12 +175,12 @@
               "title": "大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,10 +189,11 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25c8c4c8f5280669",
+  "active": "9b49685f46d42619",
   "lastOpenFiles": [
     "欢迎.md"
   ]
