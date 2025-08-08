@@ -158,19 +158,9 @@
               "icon": "lucide-list",
               "title": "欢迎 的大纲"
             }
-          },
-          {
-            "id": "7d8492fce949a907",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -187,7 +177,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "73cea7bf1011168b",
+  "active": "6bc9db782cfe7c0d",
   "lastOpenFiles": [
     "Anaconda.md",
     "欢迎.md"
