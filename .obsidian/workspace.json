@@ -31,23 +31,6 @@
               "title": "新标签页"
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "0fb049a12757a89c",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "25c8c4c8f5280669",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          }
         ]
       }
     ],
@@ -167,16 +150,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "欢迎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "欢迎 的大纲"
+            }
+          },
+          {
+            "id": "7d8492fce949a907",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -193,8 +187,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9b49685f46d42619",
+  "active": "73cea7bf1011168b",
   "lastOpenFiles": [
+    "Anaconda.md",
     "欢迎.md"
   ]
 }
