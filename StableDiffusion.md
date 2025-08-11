@@ -18,9 +18,13 @@ midjourney 的使用，扁平化素材（小人，icon）的生成
 
 stable diffusion 是机器学习模型，web-ui 对他进行了封装，于是需要通过 Anaconda 和 python 进行环境管理和启动
 
+python版本至少为3.9，web-ui官方建议使用python3.10或3.11，更高的版本可能不兼容部分插件
+
 Anaconda 的安装和环境配置参考 [[Anaconda]] 和 [[Anaconda#创建虚拟环境]]
 
-通过 conda 安装匹配版本的 PyTorch，同时要注意 CUDA 版本
+通过 conda 安装匹配版本的 PyTorch，同时要注意 CUDA 版本，webui会自动安装PyTorch，可以手动安装确保版本合适
+
+CUDA 11.8：
 ```bash
 conda install pytorch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 pytorch-cuda=11.8 -c pytorch -c nvidia
 ```
@@ -48,11 +52,11 @@ nvidia-smi
 [Stability AI Image Models — Stability AI](https://stability.ai/stable-image)
 
 webui开源代码地址：[AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) ，以此进行 git 部署 stable-diffusion-webui
-	在 git bash 中输入 `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui)`，即可下载文件夹
+	在 git bash 中输入 `git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui`，即可下载文件夹
 
 这也是一个 webui [Sygil-Dev/sygil-webui: Stable Diffusion web UI](https://github.com/Sygil-Dev/sygil-webui)
 
-项目安装后，需要在 conda 环境中安装 webui 依赖
+项目安装后，在 conda 环境中安装 webui 依赖 （非必要，webui会自动安装依赖）
 ```bash
 pip install -r requirements.txt
 ```
@@ -60,10 +64,30 @@ pip install -r requirements.txt
 ```bash
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+或者设置全局镜像源，再安装
+```bash
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
-### webui-user. bat 启动
+### 启动
+#### webui官方脚本启动
+在webui-user.bat中
+set PYTHON= 写入python.exe的位置，set COMMANDLINE_ARGS= 中写入启动参数,如:
+```bash
+@echo off
 
-不是很推荐用 webui-user. bat 进行启动, 因为它会使用默认的 python 环境，不太好管理。
+set PYTHON="D:\Python\Python310\python.exe"
+set GIT=
+set VENV_DIR=
+set COMMANDLINE_ARGS=--listen --xformers --medvram
+
+call webui.bat
+```
+启动webui-user.bat，它会自动用set PYTHON 的python创建venv虚拟环境，然后启动webui
+
+~~不是很推荐用 webui-user. bat 进行启动, 因为它会使用默认的 python 环境，不太好管理。~~
+
+#### 不使用webui官方脚本启动:
 
 在 conda prompt 或者命令行中使用以下语句启动虚拟环境
 ```bash
@@ -77,6 +101,7 @@ python launch.py --listen --xformers
 python launch.py --listen
 python launch.py --xformers
 ```
+`--listen` 参数启用外部网络连接
 `--xformers` 参数可以提升生成速度 `
 
 
@@ -100,30 +125,24 @@ python launch.py --listen --xformers --medvram --opt-split-attention --no-half-v
 |---|---|---|
 |`--opt-split-attention`|优化注意力计算，降低显存占用|4-6GB显存|
 |`--no-half-vae`|禁用VAE半精度，减少色块问题|低端显卡（如GTX 10系列）|
+| `--medvram`             | 优化显存，降低一点性能          | 8-10GB显存        |
+| `--lowvram`             | 比`--medvram`更彻底，破坏性能 | 6GB以下显存         |
 
 [windows下命令行模式中cd命令无效的原因-CSDN博客](https://blog.csdn.net/qq_45061258/article/details/113282513)
 [Download The Official NVIDIA Drivers | NVIDIA](https://www.nvidia.com/en-us/drivers/)
 [CUDA GPU Compute Capability | NVIDIA Developer](https://developer.nvidia.com/cuda-gpus)
 ### models & extensions 模型和插件管理
 
-#### 权重文件
-下载权重文件 `sd-v 1-4.ckpt`:[CompVis/stable-diffusion-v-1-4-original · Hugging Face](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original)
-但好像 [stablediffusiontutorials/stable-diffusion-v1.5 · Hugging Face](https://huggingface.co/stablediffusiontutorials/stable-diffusion-v1.5)  里的 safetensors 也能用
-
-推荐替代（更安全高效）：未测试的链接
-1. **Pruned版本**（体积缩小50%，去除非必要权重）：  
-    [https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors)
-2. **现代格式**（`.safetensors`防恶意代码）：  
-    [https://civitai.com/models/4201?modelVersionId=15236](https://civitai.com/models/4201?modelVersionId=15236)
 #### 官方下载扩展
 在 extension 中选择 avaliable 进行操作，但是可能会因为网络问题不成功，出现 `AssertionError: extension access disabled because of command line flags` 。可参考[喂饭级stable_diffusion_webUI使用教程 - 知乎](https://zhuanlan.zhihu.com/p/617997179)
 我建议用 git 在 extensions 文件夹下复制
-
 
 #### 绘图模型
 
 绘图模型是为了特定风格进行训练的特化模型，不同模型生成不同风格的图片
 模型文件放在 `models/Stable-diffusion` 目录下
+
+如果你没有下载任何模型,那么在webui启动前会自动下载一个[v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors)模型,下载完才启动。这个模型不适合直接使用，但适合训练
 
 有关模型的解释：[终极指南！Stable Diffusion 模型全解析，看这篇就够了_stablediffusion 模型-CSDN博客](https://blog.csdn.net/ice_99/article/details/146556735) 
 
