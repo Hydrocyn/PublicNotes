@@ -210,9 +210,41 @@ conda remove --name myenv --all
 
 查包命令： [conda常用命令_如何查看conda环境中安装了哪些依赖库-CSDN博客](https://blog.csdn.net/qq_35890572/article/details/132423320)
 
-### 导出环境与复制
-- 导出环境配置：`conda env export > environment.yml`
-- 从文件创建环境：`conda env create -f environment.yml`
+使用 conda 导入 `requirements.txt` ：
+```bash
+conda install --yes --file requirements.txt
+```
+如果 `requirements.txt` 中的某些包不可用，可以使用以下命令逐个安装包：
+```bash
+while read requirement; do conda install --yes $requirement; done < requirements.txt
+```
+如果 Conda 命令无效，可以使用 pip 作为备用：
+```bash
+while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
+```
+你也可以将环境导出为`.yml`文件，然后在其他机器上创建相同的环境：
+```bash
+conda env export > environment.yml
+conda env create -f environment.yml
+```
+
+#### 修改 pip install 的默认位置
+[修改pip 默认安装位置 - 哔哩哔哩](https://www.bilibili.com/opus/801822260725809168) 
+查询当前存储信息
+```bash
+python -m site
+```
+查找目前环境的设定文件位置
+```bash
+python -m site help
+```
+使用以下命令也可以找到当前环境的配置
+```bash
+python -c "import site; print(site.__file__)"
+```
+
+>好像 anaconda 会直接控制包的安装位置，所以以上的似乎可以不管
+
 
 ## 常用指令
 

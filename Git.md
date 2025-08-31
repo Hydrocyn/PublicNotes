@@ -6,6 +6,7 @@ tags:
 [Git 教程 | 菜鸟教程 (runoob.com)](https://www.runoob.com/git/git-tutorial.html)
 [Git - 安装 Git (git-scm.com)](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
 参考书：Git 版本控制管理：jon loeliger
+[Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)  交互式学习 git
 
 ## 交互问题
 
@@ -356,6 +357,7 @@ git branch -m master main
 ```bash
 git push origin -u main
 ```
+
 3. **删除远程的 `master` 分支（如果需要）**
 如果你希望删除远程的 `master` 分支，可以运行以下命令：
 ```bash
@@ -541,3 +543,8 @@ git 允许在版本库中任何目录下有 `.gitignore` 文件，每个文件�
 > ```
 > 这意味着 git 会忽略版本库中所有的. o 文件，但是会追踪一个例外，即在 vendor_files 子目录下的 driver. o 文件
 
+
+## substree 子库
+
+同步子库专用
+`git subtree push --prefix=PublicNotes publicnote master`
