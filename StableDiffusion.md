@@ -249,7 +249,18 @@ blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform,
 
 ### 测试案例
 
-
+```
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, 
+perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
+full body, full body portrait, 1girl, solo, cat girl, standing 
+white hair, long hair, hair between eye, purple streaked hair, ahoge,
+colored inner animal ears, hairband, hair ribbon, pom-pom-hair-ornament, kemonomimi mode,
+red eyes, gentle expression, determined yet kind look, anime style, line art emphasis,
+(pure white background:1.1), plain background, no patterns, no borders, no frames, 
+animal ears, cat ears, pom-pom-hair-ornament, cat tail
+black lace dress, white thigh-highs
+looking at viewer, head tilt, arms at sides, virtual youtuber
+```
 ### 碎片
 
 Latent 算法再潜空间进行放大，出图后会与原画风有差别
@@ -278,20 +289,3 @@ Fern (Frieren: Beyond Journey's End), full body portrait, 1girl, solo, purple ha
 holding school bag, casual elegant stance, gentle posture,
 ```
 
-
-```
- socks, cat ears, dress,  s, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, solo, full body
-```
-
-
-```
-(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, 
-perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
-full body, full body portrait, 1girl, solo,human, 
-white hair, long hair, hair between eye
-red eyes, gentle expression, determined yet kind look, anime style, line art emphasis,
-(pure white background:1.1), plain background, no patterns, no borders, no frames, 
-animal ears, cat ears
-dress
-casual elegant stance, gentle posture
-```
