@@ -248,18 +248,38 @@ blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform,
 ```
 
 ### 测试案例
-
+`artist:ree(re-19)`  `artist:cocobalking`
+131542515047364, 768 x 1344 和 1206 x 2144 呈现出不同的结果
 ```
-(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, 
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres,artist:ree(re-19)
 perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
 full body, 1girl, solo, cat girl, standing 
-white hair, long hair, multicolored hair, purple streaked hair, side braid, double-parted bangs, hair between eye, ahoge,
-colored inner animal ears, hairband, hair ribbon, pom-pom-hair-ornament, kemonomimi mode,
-red eyes, :3, light blush, determined yet kind look, anime style,
+white hair, long hair, multicolored hair, hairband(aqua), hair ribbon, streaked hair(violet), side braid, double-parted bangs, hair between eye, ahoge,
+colored inner animal ears, pom-pom-hair-ornament on head, kemonomimi mode,
+heterochromia, blue eyes, violet eyes, :3, light blush, determined yet kind look, anime style,
 (pure white background:1.1), plain background, no patterns, no borders, no frames, 
-collar bone, small breasts, black dress, frills dress, spaghetti dress, midriff, belt, pleated skirt, long sleeves jacket, short jacket, open jacket, two-sided coat, two-sided fabric, pleated skirt, thigh-highs, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
+collar bone, choker, small breasts, short jacket, black dress, frills dress, spaghetti dress, belt, pleated skirt, long sleeves jacket, open jacket, two-sided fabric, pleated skirt(white inner), two-sided coat, thigh-highs, garter belt, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
 looking at viewer, head tilt, arms at sides, virtual youtuber
 ```
+deepseek 修复版本
+```
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp focus, absurdres, highres, 8k,
+perfect face, heterochromia, blue eyes, violet eyes, (beautiful detailed eyes:1.4), shining pupils,detailed skin, light blush,
+full body, 1girl, solo, cat girl, kemonomimi, standing, looking at viewer, head tilt, arms at sides,
+multicolored hair, white hair with long violet streaks, long hair, side braid, double-parted bangs, hair between eyes, ahoge
+aqua hairband, hair ribbon, white pom-pom hair ornament,
+animal ears (white with light pink inner),
+:3, determined yet kind expression, virtual youtuber
+choker, small breasts, collar bone,
+black spaghetti-strap dress with white frills, 
+midriff, black pleated skirt,
+open short jacket (black outside, white inside),
+belt, thigh-high socks(asymmetrical: one black, one white with black garter belt),
+strappy high-heeled shoes,
+cat tail with blue bowtie ornament,
+(pure white background:1.2), plain background, no patterns, no borders, no frames
+```
+
 ### 碎片
 
 Latent 算法再潜空间进行放大，出图后会与原画风有差别
