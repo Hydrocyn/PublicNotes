@@ -253,11 +253,11 @@ blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform,
 (masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, 
 perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
 full body, 1girl, solo, cat girl, standing 
-white hair, long hair, side braid, hair between eye, multicolored hair, purple streaked hair, ahoge,
+white hair, long hair, multicolored hair, purple streaked hair, side braid, double-parted bangs, hair between eye, ahoge,
 colored inner animal ears, hairband, hair ribbon, pom-pom-hair-ornament, kemonomimi mode,
 red eyes, :3, light blush, determined yet kind look, anime style,
 (pure white background:1.1), plain background, no patterns, no borders, no frames, 
-collar bone, small breasts, black dress, frills dress, spaghetti dress, midriff, belt, pleated skirt, short sleeves jacket, short jacket, open jacket, two-sided coat, pleated skirt, white thigh-highs, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
+collar bone, small breasts, black dress, frills dress, spaghetti dress, midriff, belt, pleated skirt, long sleeves jacket, short jacket, open jacket, two-sided coat, two-sided fabric, pleated skirt, thigh-highs, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
 looking at viewer, head tilt, arms at sides, virtual youtuber
 ```
 ### 碎片

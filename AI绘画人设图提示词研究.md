@@ -90,7 +90,7 @@
 `knee-highs` 膝袜（刚好到膝盖）
 `sheer thigh-highs` 薄纱过膝袜 `lace-trimmed thigh-highs` 蕾丝边过膝袜`striped thigh-highs` 条纹过膝袜
 
- 
+
 鞋
  `platform sandals` 厚底凉鞋（木屐似乎也是） `sandals` 凉鞋 `sneakers` 运动鞋 `high heels` 高跟鞋  `loafers` 乐福鞋 `leather shoes` 皮鞋
 `mary janes` 玛丽珍鞋，经典小 
