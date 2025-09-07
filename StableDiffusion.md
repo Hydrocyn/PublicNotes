@@ -273,3 +273,17 @@ negative prompt
 (frame, border, ornate border, decorative frame, background patterns, flowers in background, ornate design in background, watermark, text),
 blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform, boring outfit, lack of details)
 ```
+
+```
+animal ears, socks, cat ears, dress, full body, hair between eyes, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, 
+```
+`blush stickers` 腮红
+`chibi, chibi only` 二头小人
+`crescent` 新月以外的月亮符号
+`hoodie` 运动连帽衫
+`neckerchief` 领巾 `bowtie` 蝴蝶领结
+`pantyhose` 连裤袜 `sailor collar` 海军领 `bracelet` 项链 `jewelry` 珠宝 `necklace` 项链，
+`hair intakes` 进气口发型，螳螂窝 `head tilt` 歪头 `pendant` 项链吊坠 `miniskirt` 超短裙（大腿位置）`miqo'te` 猫魅族 `pendant collar` 很宽的吊坠项圈 `spiked collar` 朋克刺领
+`heterochromia` 异色瞳
+`cowboy shot` 中景镜头，只拍到大腿 `frills` 褶边，荷叶边 `hairclip` 发夹 `head tilt` 歪头
+`sleeves past wrists` 长袖口 `back bow` 和服特有的背部节 `hakama` 和服袴裙 `kimono` 和服 `print kimono` 印花和服 `oil-paper umbrella` 油纸伞 `pinching sleeves` 捏住袖子 `sash` 很宽的腰带或者装饰带，`neck ribbon` 类似领结的彩带 `mini skirt` 根本遮不住的迷你裙 `pleated skirt` 百褶裙 `apon` 围裙 `firlled skirt` 蕾丝边裙  `layered skirt` 层叠裙 `maid headdress` 女仆发带， `long sleeves` 长袖 `tail ornament` 尾巴上的装饰 `jacket` 外套 `drill hair` 钻头卷发 `dress bow` 裙子上的蝴蝶结 `strapless dress` 无带裙子 `two-tone ribbon` 双色彩带, `juliet sleeves` 朱丽叶袖 `hands on own hips` 双手叉腰 `furrowed brow` 皱眉 `multi-tied hair` 麻花辫 `polka dot` 波点 `pout` 嘟嘴
