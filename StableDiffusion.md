@@ -275,7 +275,7 @@ blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform,
 ```
 
 ```
-animal ears, socks, cat ears, dress, full body, hair between eyes, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, 
+animal ears, socks, cat ears, dress, full body, hair between eyes, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, solo, full body
 ```
 `blush stickers` 腮红
 `chibi, chibi only` 二头小人
@@ -286,4 +286,11 @@ animal ears, socks, cat ears, dress, full body, hair between eyes, hair ornament
 `hair intakes` 进气口发型，螳螂窝 `head tilt` 歪头 `pendant` 项链吊坠 `miniskirt` 超短裙（大腿位置）`miqo'te` 猫魅族 `pendant collar` 很宽的吊坠项圈 `spiked collar` 朋克刺领
 `heterochromia` 异色瞳
 `cowboy shot` 中景镜头，只拍到大腿 `frills` 褶边，荷叶边 `hairclip` 发夹 `head tilt` 歪头
-`sleeves past wrists` 长袖口 `back bow` 和服特有的背部节 `hakama` 和服袴裙 `kimono` 和服 `print kimono` 印花和服 `oil-paper umbrella` 油纸伞 `pinching sleeves` 捏住袖子 `sash` 很宽的腰带或者装饰带，`neck ribbon` 类似领结的彩带 `mini skirt` 根本遮不住的迷你裙 `pleated skirt` 百褶裙 `apon` 围裙 `firlled skirt` 蕾丝边裙  `layered skirt` 层叠裙 `maid headdress` 女仆发带， `long sleeves` 长袖 `tail ornament` 尾巴上的装饰 `jacket` 外套 `drill hair` 钻头卷发 `dress bow` 裙子上的蝴蝶结 `strapless dress` 无带裙子 `two-tone ribbon` 双色彩带, `juliet sleeves` 朱丽叶袖 `hands on own hips` 双手叉腰 `furrowed brow` 皱眉 `multi-tied hair` 麻花辫 `polka dot` 波点 `pout` 嘟嘴
+`sleeves past wrists` 长袖口 `back bow` 和服特有的背部节 `hakama` 和服袴裙 `kimono` 和服 `print kimono` 印花和服 `oil-paper umbrella` 油纸伞 `pinching sleeves` 捏住袖子 `sash` 很宽的腰带或者装饰带，`neck ribbon` 类似领结的彩带 `mini skirt` 根本遮不住的迷你裙 `pleated skirt` 百褶裙 `apon` 围裙 `firlled skirt` 蕾丝边裙  `layered skirt` 层叠裙 `maid headdress` 女仆发带， `long sleeves` 长袖 `tail ornament` 尾巴上的装饰 `jacket` 外套 `drill hair` 钻头卷发 `dress bow` 裙子上的蝴蝶结 `strapless dress` 无带裙子 `two-tone ribbon` 双色彩带, `juliet sleeves` 朱丽叶袖 `hands on own hips` 双手叉腰 `furrowed brow` 皱眉 `multi-tied hair` 麻花辫 `polka dot` 波点 `pout` 嘟嘴 `puffy sleeves` 泡泡袖 `streaked hair` 挑染 `own hands together` 把手放在一起 `medium hair` 中等长度的头发 `sidelocks` 耳前侧发 `:3` 猫猫嘴
+`aqua hair` 淡蓝色头发 `bandaid on leg` 腿上的创可贴 `cropped shirt` 露出腹部的裙子 `midriff` 露出腹部 `off-shoulder shirt` 无袖裙子（无袖+露腹是否是抹胸？）
+`eyewear on head` 眼镜戴额头上 `open clothes` 衣服敞开 `open jacket` 夹克敞开 `plaid clothes` 格子印花 `platform sandals` 厚底凉鞋（木屐似乎也是）`sandals` 凉鞋 `standing on on leg` 单脚站立 `thick eyelashes` 厚眼睫毛 `wrist cuffs` 腕带袖口
+`enmaided` cos 成女仆的角色但不是女仆 `parallel hairclips` 类似螳螂窝翘起的两片头发
+`kneehighs` 过膝袜 `mary janes` 玛丽珍鞋，经典小皮鞋 `beret` 贝雷帽 `pinafore dress` 无袖连衣裙 `cardigan` 开衫毛衣 `serafuku` 水手服 `ahoge` 呆毛 `pom-pom-hair-ornament` 头上的装饰毛球 `beanie` 针织帽 `sweater vest` 毛衣背心 `jingle bell` 金钩杯 `:d` 露出虎牙的笑 `clenched hands` 握拳，适合猫猫手势 `buckle` 皮带扣 `half-up braid` 像皇冠一样绕在头上的辫子
+`wariza` 鸭子坐 `;d` 单眼虎牙笑 `two side up` 自然散落的双马尾 `fangs` 虎牙
+`from behind, from side` 设定图的两个方位 `multiple views` 多视角 `straight-on` 完全正面
+`\||/` 一个手势 `cropped legs` 图像在腿部截断 `double-parted bangs` 左右两侧的刘海 `fingerless gloves` 露指手套 `goggles` 护目镜 `mismatched legwear` 两种颜色的腿袜 `uneven legwear` 长度不同的腿袜 `fur trim` 毛领 `fur-trimmed capelet` 毛领披肩 `hood down` 没有戴上的兜帽 `hooded capelet` 小披肩 `mole` 痣 `thigh strap` 腿环 `belt` 腰带 `hairband` 发带 `one eye closed` 闭上一只眼睛 `veil` 头纱 `arms at sides` 手放两边 `loose socks` 堆堆袜 `satchel` 衣服上的小挎包
