@@ -238,6 +238,17 @@ controlnet 提供了将骨骼文件导入程序，指导 AI 生成特定动作�
 
 ## ComfyUI 使用实践
 
+### negative prompt
+```
+(worst quality), (low quality), (normal quality),(bad anatomy),(bad hands),(extra fingers), (fused fingers), (missing fingers),
+(malformed hands),(poorly drawn hands),(disfigured hands),(long fingers),(bad proportions), (extra limbs),(deformed limbs),
+(text),(logo),(watermark),(signature),(blurry),(duplicate),(cropped),(error),(mutation),(deformed face),(bad eyes),(bad mouth),(bad face),(extra arms),(extra legs),(ugly),(tiling),(nsfw),
+(frame, border, ornate border, decorative frame, background patterns, flowers in background, ornate design in background, watermark, text),
+blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform, boring outfit, lack of details)
+```
+
+### 测试案例
+
 
 ### 碎片
 
@@ -251,12 +262,13 @@ Latent 算法再潜空间进行放大，出图后会与原画风有差别
 
 K 采样器的“降噪”组好设置在 0.5 以上，经过测试 0.5 是个比较好的数值
 
-菲伦头像
+
+菲伦头像案例
 ```
 (masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, perfect face, beautiful eyes,
 Fern (Frieren: Beyond Journey's End), portrait, 1girl, solo, headshot, upper body, purple hair, long hair, purple eyes, human, elegant, gentle expression, determined yet kind look, anime style, line art emphasis, clean white background, wearing wedding dress, smiling
 ```
-菲伦学院风
+菲伦学院风案例
 positive prompt
 ```
 (masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), 
@@ -265,35 +277,21 @@ Fern (Frieren: Beyond Journey's End), full body portrait, 1girl, solo, purple ha
 (pure white background:1.1), plain background, no patterns, no borders, no frames, (idol-style sailor uniform, grey blouse, gray pleated skirt, dark red ribbon, black knee-high socks, loafers, decorative ribbon, elaborate bow tie,), school emblem,
 holding school bag, casual elegant stance, gentle posture,
 ```
-negative prompt
-```
-(worst quality), (low quality), (normal quality),(bad anatomy),(bad hands),(extra fingers), (fused fingers), (missing fingers),
-(malformed hands),(poorly drawn hands),(disfigured hands),(long fingers),(bad proportions), (extra limbs),(deformed limbs),
-(text),(logo),(watermark),(signature),(blurry),(duplicate),(cropped),(error),(mutation),(deformed face),(bad eyes),(bad mouth),(bad face),(extra arms),(extra legs),(ugly),(tiling),(nsfw),
-(frame, border, ornate border, decorative frame, background patterns, flowers in background, ornate design in background, watermark, text),
-blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform, boring outfit, lack of details)
-```
+
 
 ```
-animal ears, socks, cat ears, dress, full body, hair between eyes, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, solo, full body
+ socks, cat ears, dress,  s, hair ornament, outstretched arm, solo, standing, tail, virtual youtuber, colored inner hair, colored inner animal ears, looking at viewer, multicolored hair,simple background, white background, arms at sides, blush, small breasts, cat tail, half-closed eyes, long twintails, thighhighs, jellyfish hair ornament, animal ear fluff, hair over one eye, hair ribbon, kemonomimi mode, solo, full body
 ```
-`blush stickers` 腮红
-`chibi, chibi only` 二头小人
-`crescent` 新月以外的月亮符号
-`hoodie` 运动连帽衫
-`neckerchief` 领巾 `bowtie` 蝴蝶领结
-`pantyhose` 连裤袜 `sailor collar` 海军领 `bracelet` 项链 `jewelry` 珠宝 `necklace` 项链，
-`hair intakes` 进气口发型，螳螂窝 `head tilt` 歪头 `pendant` 项链吊坠 `miniskirt` 超短裙（大腿位置）`miqo'te` 猫魅族 `pendant collar` 很宽的吊坠项圈 `spiked collar` 朋克刺领
-`heterochromia` 异色瞳
-`cowboy shot` 中景镜头，只拍到大腿 `frills` 褶边，荷叶边 `hairclip` 发夹 `head tilt` 歪头
-`sleeves past wrists` 长袖口 `back bow` 和服特有的背部节 `hakama` 和服袴裙 `kimono` 和服 `print kimono` 印花和服 `oil-paper umbrella` 油纸伞 `pinching sleeves` 捏住袖子 `sash` 很宽的腰带或者装饰带，`neck ribbon` 类似领结的彩带 `mini skirt` 根本遮不住的迷你裙 `pleated skirt` 百褶裙 `apon` 围裙 `firlled skirt` 蕾丝边裙  `layered skirt` 层叠裙 `maid headdress` 女仆发带， `long sleeves` 长袖 `tail ornament` 尾巴上的装饰 `jacket` 外套 `drill hair` 钻头卷发 `dress bow` 裙子上的蝴蝶结 `strapless dress` 无带裙子 `two-tone ribbon` 双色彩带, `juliet sleeves` 朱丽叶袖 `hands on own hips` 双手叉腰 `furrowed brow` 皱眉 `multi-tied hair` 麻花辫 `polka dot` 波点 `pout` 嘟嘴 `puffy sleeves` 泡泡袖 `streaked hair` 挑染 `own hands together` 把手放在一起 `medium hair` 中等长度的头发 `sidelocks` 耳前侧发 `:3` 猫猫嘴
-`aqua hair` 淡蓝色头发 `bandaid on leg` 腿上的创可贴 `cropped shirt` 露出腹部的裙子 `midriff` 露出腹部 `off-shoulder shirt` 无袖裙子（无袖+露腹是否是抹胸？）
-`eyewear on head` 眼镜戴额头上 `open clothes` 衣服敞开 `open jacket` 夹克敞开 `plaid clothes` 格子印花 `platform sandals` 厚底凉鞋（木屐似乎也是）`sandals` 凉鞋 `standing on on leg` 单脚站立 `thick eyelashes` 厚眼睫毛 `wrist cuffs` 腕带袖口
-`enmaided` cos 成女仆的角色但不是女仆 `parallel hairclips` 类似螳螂窝翘起的两片头发
-`kneehighs` 过膝袜 `mary janes` 玛丽珍鞋，经典小皮鞋 `beret` 贝雷帽 `pinafore dress` 无袖连衣裙 `cardigan` 开衫毛衣 `serafuku` 水手服 `ahoge` 呆毛 `pom-pom-hair-ornament` 头上的装饰毛球 `beanie` 针织帽 `sweater vest` 毛衣背心 `jingle bell` 金钩杯 `:d` 露出虎牙的笑 `clenched hands` 握拳，适合猫猫手势 `buckle` 皮带扣 `half-up braid` 像皇冠一样绕在头上的辫子
-`wariza` 鸭子坐 `;d` 单眼虎牙笑 `two side up` 自然散落的双马尾 `fangs` 虎牙
-`from behind, from side` 设定图的两个方位 `multiple views` 多视角 `straight-on` 完全正面
-`\||/` 一个手势 `cropped legs` 图像在腿部截断 `double-parted bangs` 左右两侧的刘海 `fingerless gloves` 露指手套 `goggles` 护目镜 `mismatched legwear` 两种颜色的腿袜 `uneven legwear` 长度不同的腿袜 `fur trim` 毛领 `fur-trimmed capelet` 毛领披肩 `hood down` 没有戴上的兜帽 `hooded capelet` 小披肩 `mole` 痣 `thigh strap` 腿环 `belt` 腰带 `hairband` 发带 `one eye closed` 闭上一只眼睛 `veil` 头纱 `arms at sides` 手放两边 `loose socks` 堆堆袜 `satchel` 衣服上的小挎包 `blunt bangs` 齐刘海 `collar bone` 锁骨 `off-shoulder sweater` 露肩毛衣 `bespectacled` 不戴眼镜的角色戴眼镜 `blunt ends` 发尾齐切但不是刘海 `pencil skirt` 包臀裙 `witch hat` 巫女帽 `side braid` 单边麻花辫 `sneakers` 运动鞋 `high heels` 高更鞋 `armband` 肩带 `loafers` 乐福鞋 `necktie` 领带 `two-sided coat` 内衬和外面不一样的外套 `two-sided fabric` 内衬外衬不同你 `scunshine` 大肠圈发圈（大概就是像漂浮一样的圈）`turtleneck` 高领毛衣 `suspenders` 袜子吊带 `suspender skirt` 吊带半裙 `rabbit ear hairband` 兔耳头饰 `collared shirt` 领子折叠的衬衫 
-`asymmetrical legwear` 不协调的袜子 `uneven legwear` 强调长度不同 `mismatched legwear` 强调图案颜色不同 `single pantsleg` 只有一只袜子
-`strappy heels` 有一条绑带的高跟鞋 `high-heeled shoes` 鞋子有高跟 `sandals` 凉鞋 `wedge heels` 后跟填满的高跟  `platform shoes/boots` 水台很高的鞋或者靴子  
-`anklet` 脚踝的装饰
+
+
+```
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres, 
+perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
+full body, full body portrait, 1girl, solo,human, 
+white hair, long hair, hair between eye
+red eyes, gentle expression, determined yet kind look, anime style, line art emphasis,
+(pure white background:1.1), plain background, no patterns, no borders, no frames, 
+animal ears, cat ears
+dress
+casual elegant stance, gentle posture
+```
