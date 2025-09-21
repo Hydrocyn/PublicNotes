@@ -27,7 +27,7 @@
 `pinching sleeves` 捏住袖子 
 `hands on own hips` 双手叉腰    `own hands together` 把手放在一起  `arms at sides` 手放两边 `outstretched arm` 张开双手
 `standing on on leg` 单脚站立  `clenched hands` 握拳，适合猫猫手势 `wariza` 鸭子坐
-`\||/` 一个手势 
+`\||/` 一个手势 `heart hands` 双手比心 `v` 比耶
 `one eye closed` 闭上一只眼睛 
 
 帽子
@@ -44,7 +44,7 @@
 `streaked hair` 挑染 `colored inner hair` 内部颜色不一样的头发 `multicolored hair` 多色头发
  
 面部特征
- `pout` 嘟嘴 `:3` 猫猫嘴  `:d` 露出虎牙的笑 `;d` 单眼虎牙笑 
+ `pout` 嘟嘴 `:3` 猫猫嘴  `:d` 露出虎牙的笑 `;d` 单眼虎牙笑 `:<` 
 `blush stickers` 腮红 `blush` 脸红
 `heterochromia` 异色瞳 `furrowed brow` 皱眉 `thick eyelashes` 厚眼睫毛  `half-closed eyes` 闭上一只眼镜
 `fangs` 虎牙

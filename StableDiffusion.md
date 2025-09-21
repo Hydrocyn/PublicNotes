@@ -250,6 +250,11 @@ blurry eyes, bad eyes, deformed eyes, extra eyes, (plain design, simple uniform,
 ### 测试案例
 `artist:ree(re-19)`  `artist:cocobalking`
 131542515047364, 768 x 1344 和 1206 x 2144 呈现出不同的结果
+983143442102580 缩短了外套下摆，效果更好了
+865022469730663 出现了三条腿
+989802996528314 出现了光腿
+72323273393010 色彩重心很好，短外套还有光腿，裙子边缘也是白色
+952275921051802，1536x 2688 黑色外套和裙子很搭，且出现了粥味，可惜手的长度出了问题
 ```
 (masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres,artist:ree(re-19)
 perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
@@ -280,7 +285,55 @@ cat tail with blue bowtie ornament,
 (pure white background:1.2), plain background, no patterns, no borders, no frames
 ```
 
+增加画师串，以及权重（此处增加了一些画师串，且为全身）
+952275921051802 1536 x 2688 画风精致了但是很多细节对不上了，比如眼镜颜色
+发现问题是选错了模型，不应该用 lemonsuger 的
+961462243139393 结果不错，就是腿很细，而且有双膝盖，修改比例为 1536 x 2304 感觉好了不少
+```
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres,artist:jacknife,artist:min_(120716),artist:rurudo
+perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
+full body, 1girl, solo, cat girl, standing 
+white hair, long hair, multicolored hair, hairband(aqua), hair ribbon, streaked hair(violet), side braid, double-parted bangs, hair between eye, ahoge,
+colored inner animal ears, pom-pom-hair-ornament on head, kemonomimi mode,
+heterochromia, blue eyes, violet eyes, :3, light blush, determined yet kind look, anime style,
+(pure white background:1.1), plain background, no patterns, no borders, no frames, 
+collar bone, choker, small breasts, short jacket, black dress, frills dress, spaghetti dress, belt, pleated skirt, long sleeves jacket, open jacket, two-sided fabric, pleated skirt(white inner), two-sided coat, thigh-highs, garter belt, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
+looking at viewer, head tilt, arms at sides, virtual youtuber
+```
+
+大头表情包测试 1000 x 1000 才能保证一些细节，2000 x 2000 似乎就让 chibi 失灵了
+```
+(masterpiece), (best quality), (ultra-detailed), illustration, clean lines, sharp details, absurdres, highres,artist:miratsu169
+perfect face, beautiful eyes,8K, (eyes:1.3),(detailed eyes:1.2), perfect eyes, sharp eyes, beautiful detailed eyes, shining pupils,((detailed eyes, detailed face, detailed skin))
+full body, chibi, chibi only, 1girl, solo, cat girl, sitting
+white hair, long hair, multicolored hair, hairband(aqua), hair ribbon, streaked hair(violet), side braid, double-parted bangs, hair between eye, ahoge,
+colored inner animal ears, pom-pom-hair-ornament on head, kemonomimi mode,
+heterochromia, blue eyes, violet eyes, :3, light blush, determined yet kind look, anime style,
+(pure white background:1.1), plain background, no patterns, no borders, no frames, 
+collar bone, choker, small breasts, short jacket, black dress, frills dress, spaghetti dress, belt, pleated skirt, long sleeves jacket, open jacket, two-sided fabric, pleated skirt(white inner), two-sided coat, thigh-highs, garter belt, asymmetrical legwear, uneven legwear, high-heeled shoes, strappy heels, cat tail, tail ornament, bowtie on tail,
+looking at viewer, head tilt, heart hands, virtual youtuber
+```
+
+喵呜的成功案例
+```
+(masterpiece, best quality, ultra-detailed), illustration, clean lines, sharp focus, 8K, anime style, artist:ree(re-19), detailed eyes, detailed face, detailed skin, beautiful eyes, sharp eyes,1girl, solo, kemonomimi, cat girl, full body, standing, light blush, :3 expression, determined yet kind look, looking at viewer, head tilt, arms at sides, white hair, long hair, multicolored streaks(aqua), side braid, double-parted bangs, hair between eyes, ahoge, hairband(aqua), hair ribbon, white animal ears, pink inner animal ears, pom-pom hair ornament,  heterochromia(blue eye, violet eye), perfect face,   black choker, collar bone, medium breasts, white jacket, short jacket, open jacket, long sleeves, black dress, frilly dress, spaghetti straps, belt, pleated skirt(white inner layer), asymmetrical legwear(black thigh-highs, white sock), garter belt, high-heeled shoes, strappy heels, cat tail, tail ornament, a bowtie on tail,  virtual youtuber,   (pure white background:1.1), plain background, no patterns, no borders, no frames,
+```
 ### 碎片
+
+
+
+一种提示词顺序
+艺术家与风格，角色数量与性别，角色身份与性质，身体特征，服装与配饰，动作与表情，环境与背景，光影与世界，整体风格
+
+两个个提示词案例，用来测试生成效果
+第一个在测试中表现不佳，未能画出两个人; 检查原因发现问题在于画幅大小
+第二个提示词似乎并没有起到权重的作用
+```
+2girls,upper body,portrait,Stelle_(honkai:_star_rail),Castorice_(honkai:_star_rail),side by side,upper body,salmon88,scottie_(phantom2),akizero1510,0.7::houkisei::, close-up,lying on beach blanket,beach background,summer,1.2::Stelle (Honkai: Star Rail), Castorice (Honkai: Star Rail)::, soft lighting, upper body, side by side,intimate pose,skin contact,blush,detailed blush,half closed eyes, little smile,off-shoulder bikini,see-through sarong,choker,thigh strap,cleavage,frills,wrist cuffs,heart-shaped sunglasses on head,butterfly accessories,highleg thong,extremely detailed skin,beautiful lighting,high quality,masterpiece,best quality,8k,anime style,white outlines
+```
+```
+0.7::artist:amashiro natsuki::,[artist:rei(sanbonzakura)],realistic,photorealistic,artist:sushispin,reoen,0.5::artist:momoko(momopoco)::,1.3::artist:hanekoto::,0.3::intricate detailed::,amazing quality,very aesthetic,absurdres,masterpiece,-4::flat color,red skin,dark skin,::,shiny skin,-0.5::monochrome,dark theme,simple background,thick things,thick calves::,1girl,solo,{alternate costume},{{{blurred foreground}}},head down,look down,newsboy cap,blouse,overcoat,shy,crossbody bag,one hand on cup,street,blurry background,pants,wind,crowd,hand in poket,from above,falling leaves,red leaf,no text,best quality,very aesthetic, absurdres
+```
 
 Latent 算法再潜空间进行放大，出图后会与原画风有差别
 想要贴近原画风可以选择传统模型放大，如 R-ESRGAN 4x+，但是细节没有 latent 精细
